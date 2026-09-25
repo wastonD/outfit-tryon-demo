@@ -1,0 +1,22 @@
+{
+  "_说明": "model 为预设模特全身正面图；garments 的 src 可以是图片 URL 或本地路径；category 可省略（由 analyzer 自动识别）：top / outer / bottom / skirt / dress。示例图来自阿里云官方文档。",
+  "cases": [
+    {
+      "name": "01_上衣加裤子",
+      "model": "https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20250626/ubznva/model_person.png",
+      "garments": [
+        {"src": "https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20250626/epousa/short_sleeve.jpeg", "category": "top"},
+        {"src": "https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20250626/rchumi/pants.jpeg", "category": "bottom"}
+      ],
+      "options": {"tuck": "auto"}
+    },
+    {
+      "name": "02_连衣裙",
+      "model": "https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20250626/ubznva/model_person.png",
+      "garments": [
+        {"src": "https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20250626/odngby/dress.jpg", "category": "dress"}
+      ],
+      "turntable": {"duration": 5, "resolution": "720P"}
+    }
+  ]
+}

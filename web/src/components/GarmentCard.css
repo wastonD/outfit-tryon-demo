@@ -1,0 +1,70 @@
+.garment-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+}
+
+.garment-thumb {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--bg);
+}
+.garment-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.garment-status {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+}
+
+.garment-card .field {
+  margin-bottom: 0;
+}
+
+.garment-card .field-error {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.garment-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.hint-quality {
+  color: var(--danger);
+}
+
+.garment-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.garment-actions .btn {
+  width: 100%;
+}
+
+.more-menu {
+  position: relative;
+}
+.more-menu .btn {
+  width: 100%;
+}
+.more-menu-popup {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  z-index: 5;
+  padding: 6px;
+}

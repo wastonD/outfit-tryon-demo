@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>collect.js 纯函数测试</title>
+  <style>
+    body { font-family: monospace; font-size: 14px; padding: 16px; }
+    .pass { color: #16a34a; }
+    .fail { color: #dc2626; font-weight: bold; }
+    #summary { margin-top: 12px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>collect.js 纯函数测试</h1>
+  <div id="results"></div>
+  <div id="summary"></div>
+
+  <script src="../collect.js"></script>
+  <script>
+    'use strict';
+    var C = window.__OutfitCollect;
+    var results = document.getElementById('results');
+    var pass = 0, fail = 0;
+
+    function eq(actual, expected) {
+      return JSON.stringify(actual) === JSON.stringify(expected);
+    }
+
+    function check(name, actual, expected) {
+      var ok = eq(actual, expected);
+      var line = document.createElement('div');
+      line.className = ok ? 'pass' : 'fail';
+      line.textContent = (ok ? '通过 ' : '失败 ') + name +
+        (ok ? '' : '  期望=' + JSON.stringify(expected) + ' 实际=' + JSON.stringify(actual));
+      results.appendChild(line);
+      if (ok) pass++; else fail++;
+    }
+
+    // ---- absolutizeUrl ----
+    check('absolutizeUrl 相对路径', C.absolutizeUrl('/img/a.jpg', 'https://a.com/p/index.html'), 'https://a.com/img/a.jpg');
+    check('absolutizeUrl 协议相对', C.absolutizeUrl('//cdn.a.com/x.jpg', 'https://a.com/p/'), 'https://cdn.a.com/x.jpg');
+    check('absolutizeUrl 已是绝对地址', C.absolutizeUrl('https://a.com/x.jpg', 'https://b.com/'), 'https://a.com/x.jpg');
+    check('absolutizeUrl 空值', C.absolutizeUrl('', 'https://a.com/'), null);
+    check('absolutizeUrl data URI 原样返回', C.absolutizeUrl('data:image/png;base64,AAAA', 'https://a.com/'), 'data:image/png;base64,AAAA');
+
+    // ---- stripThumbnailSuffix ----
+    check('去掉淘宝缩略图后缀 _50x50', C.stripThumbnailSuffix('https://img.alicdn.com/i/a.jpg_50x50.jpg'), 'https://img.alicdn.com/i/a.jpg');
+    check('去掉淘宝缩略图后缀 _.webp', C.stripThumbnailSuffix('https://img.alicdn.com/i/a.jpg_.webp'), 'https://img.alicdn.com/i/a.jpg');
+    check('去掉京东缩略图后缀 !q70', C.stripThumbnailSuffix('https://img.jd.com/i/a.jpg!q70'), 'https://img.jd.com/i/a.jpg');
+    check('去掉通用尺寸段 _300x300', C.stripThumbnailSuffix('https://cdn.a.com/x_300x300.jpg'), 'https://cdn.a.com/x.jpg');
+    check('去掉通用尺寸段+质量 _300x300q90', C.stripThumbnailSuffix('https://cdn.a.com/x_300x300q90.jpg'), 'https://cdn.a.com/x.jpg');
+    check('没有缩略图后缀时原样返回', C.stripThumbnailSuffix('https://cdn.a.com/original.jpg'), 'https://cdn.a.com/original.jpg');
+    check(
+      '真实文件名本身带下划线时只去掉扩展名后的后缀（回归：曾把整个文件名截断导致 404）',
+      C.stripThumbnailSuffix('//gw.alicdn.com/bao/uploaded/i1/2217457947858/O1CN013Vxs7w27v1QkqLuiJ_!!2217457947858.jpg_.webp'),
+      '//gw.alicdn.com/bao/uploaded/i1/2217457947858/O1CN013Vxs7w27v1QkqLuiJ_!!2217457947858.jpg'
+    );
+
+    // ---- dedupeAndSortImages ----
+    check(
+      'dedupeAndSortImages 去重保留更大尺寸并按面积降序',
+      C.dedupeAndSortImages([
+        { url: 'a.jpg', width: 100, height: 100 },
+        { url: 'b.jpg', width: 400, height: 400 },
+        { url: 'a.jpg', width: 300, height: 300 },
+      ]),
+      [
+        { url: 'b.jpg', width: 400, height: 400 },
+        { url: 'a.jpg', width: 300, height: 300 },
+      ]
+    );
+    check('dedupeAndSortImages 忽略空 url', C.dedupeAndSortImages([{ url: '', width: 10, height: 10 }, { url: 'x.jpg', width: 1, height: 1 }]), [
+      { url: 'x.jpg', width: 1, height: 1 },
+    ]);
+
+    // ---- collectImgElements：懒加载占位图回归测试 ----
+    (function () {
+      var img = document.createElement('img');
+      img.setAttribute('data-src', 'https://cdn.a.com/real-photo.jpg');
+      img.setAttribute('src', '//g.alicdn.com/s.gif');
+      img.style.width = '300px';
+      img.style.height = '300px';
+      img.style.display = 'block';
+      document.body.appendChild(img);
+      var result = C.collectImgElements(document, 'https://a.com/');
+      var found = result.filter(function (c) { return c.url === 'https://cdn.a.com/real-photo.jpg'; });
+      check(
+        'collectImgElements 懒加载占位图：应采到 data-src 真实地址而不是 src 占位图（回归：曾采到占位图导致候选图空白排第一）',
+        found.length === 1,
+        true
+      );
+      check(
+        'collectImgElements 懒加载候选按最低达标尺寸计分，不用页面给的占位框尺寸（避免挤掉真正的主图）',
+        found.length === 1 ? [found[0].width, found[0].height] : found,
+        [200, 200]
+      );
+      document.body.removeChild(img);
+    })();
+
+    // ---- detectPlatform ----
+    check('detectPlatform 淘宝', C.detectPlatform('https://item.taobao.com/item.htm?id=1'), 'taobao');
+    check('detectPlatform 天猫', C.detectPlatform('https://detail.tmall.com/item.htm?id=1'), 'taobao');
+    check('detectPlatform 京东', C.detectPlatform('https://item.jd.com/100.html'), 'jd');
+    check('detectPlatform 优衣库', C.detectPlatform('https://www.uniqlo.com/us/en/products/E1'), 'uniqlo');
+    check('detectPlatform 未知平台', C.detectPlatform('https://example.com/p/1'), 'other');
+    check('detectPlatform 空值', C.detectPlatform(null), 'unknown');
+
+    var summary = document.getElementById('summary');
+    summary.className = fail === 0 ? 'pass' : 'fail';
+    summary.textContent = '共 ' + (pass + fail) + ' 条，通过 ' + pass + '，失败 ' + fail;
+  </script>
+</body>
+</html>

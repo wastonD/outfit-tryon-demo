@@ -1,0 +1,69 @@
+# 模型配置。复制为 providers.yaml 后按需修改；密钥写在 server/.env，这里只填环境变量名。
+#
+# providers：可用的模型实例。type 是适配器类型（见 providers/ 和 resolvers/ 下的 @register）。
+#   enabled: false  暂时禁用
+#   info:           覆盖许可证、是否可商用、单价（元/次）、是否占用 GPU
+# routes：每种能力按顺序尝试，前一个不可用或失败时自动换下一个。
+#   可以加子路由，例如 tryon.hd，调用时指定 route="tryon.hd"。
+
+providers:
+  # ---------- 链接解析 ----------
+  generic:
+    type: generic_meta
+    skip_platforms: []          # 接入联盟接口后可填 [taobao, jd, pdd, douyin]
+
+  # ---------- 服装识别：任意 OpenAI 兼容视觉大模型 ----------
+  qwen-local:                   # P1：llama.cpp 本地运行 Qwen3-VL-4B（Apache-2.0），见 worker/README.md
+    type: openai_compat_vlm      # 默认跑 CPU（-ngl 0），不占显存，避免和 worker 里的 FASHN 抢 8GB 显存
+    base_url: http://127.0.0.1:8080/v1
+    model: qwen3-vl-4b
+    resize_long_edge: 768        # 图片 token 数随分辨率暴涨是本地 CPU 识别超时的根因，缩放到长边 768 再发送
+    timeout: 90
+    info: {commercial_ok: true, license: Apache-2.0, cost_per_call: 0, uses_gpu: false, vram_gb: null}
+  qwen-cloud:
+    type: openai_compat_vlm
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    model: qwen-vl-max
+    api_key_env: DASHSCOPE_API_KEY
+    info: {license: 阿里云百炼服务协议, cost_per_call: null}
+  # doubao: {type: openai_compat_vlm, base_url: https://ark.cn-beijing.volces.com/api/v3, model: <接入点ID>, api_key_env: ARK_API_KEY}
+
+  # ---------- 本地开源模型（P1 的 worker 进程） ----------
+  local-gpu:
+    type: remote_worker
+    url: http://127.0.0.1:9001
+    capabilities: [segmenter, tryon, upscaler, turntable, model_generator]
+    spec: {max_garments_per_call: 1, supports_layering: true}
+    turntable_spec: {supports_last_frame: false}
+    timeout: 1800
+    info: {commercial_ok: true, license: "Apache-2.0 / MIT / BSD（见 LICENSES.md）", cost_per_call: 0, uses_gpu: true, vram_gb: 8}
+
+  # ---------- 云端 API ----------
+  aliyun-tryon:
+    type: aliyun_tryon
+    model: aitryon
+  aliyun-tryon-plus:
+    type: aliyun_tryon
+    model: aitryon-plus
+  aliyun-segmenter:
+    type: aliyun_segmenter
+    # endpoint: https://{WorkspaceId}.cn-beijing.maas.aliyuncs.com/api/v1/services/vision/image-process/process
+  aliyun-wan:
+    type: aliyun_wan_turntable
+    model: wan2.7-i2v-2026-04-25
+  aliyun-t2i:                   # 文生图生成预设模特底图，一次性批量生成用，见 bench/gen_presets.py
+    type: aliyun_wan_t2i
+    # model、size、negative_prompt 均有默认值（见 providers/aliyun.py 里 AliyunWanT2I 的类注释），一般不用改
+  kling-tryon:
+    type: kling_tryon
+    enabled: false              # 购买资源包后改为 true
+
+routes:
+  resolver:        [generic]
+  analyzer:        [qwen-local, qwen-cloud]
+  segmenter:       [local-gpu, aliyun-segmenter]
+  tryon:           [local-gpu, aliyun-tryon]
+  tryon.hd:        [aliyun-tryon-plus, local-gpu]
+  upscaler:        [local-gpu]
+  turntable:       [local-gpu, aliyun-wan]
+  model_generator: [local-gpu, aliyun-t2i]

@@ -1,0 +1,19 @@
+[project]
+name = "outfit-server"
+version = "0.1.0"
+description = "跨电商穿搭试衣：可插拔多模型后端"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115",
+  "uvicorn[standard]>=0.30",
+  "pydantic>=2.7",
+  "pyyaml>=6",
+  "python-multipart>=0.0.9",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

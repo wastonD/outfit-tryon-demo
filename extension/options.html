@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>设置 - 穿搭试衣助手</title>
+  <style>
+    body {
+      font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+      font-size: 14px;
+      width: 420px;
+      padding: 16px 20px;
+      color: #111827;
+    }
+    h1 {
+      font-size: 16px;
+    }
+    label {
+      display: block;
+      margin-top: 14px;
+      font-weight: bold;
+    }
+    input {
+      width: 100%;
+      margin-top: 4px;
+      padding: 7px 8px;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      box-sizing: border-box;
+      font-size: 13px;
+    }
+    .hint {
+      color: #6b7280;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+    .row {
+      margin-top: 16px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    button {
+      padding: 7px 14px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    #saveBtn {
+      background: #4f46e5;
+      color: #fff;
+    }
+    #testBtn {
+      background: #f3f4f6;
+      color: #111827;
+      border: 1px solid #d1d5db;
+    }
+    #msg {
+      margin-top: 12px;
+      padding: 8px 10px;
+      border-radius: 6px;
+      font-size: 13px;
+      display: none;
+    }
+    #msg.ok {
+      display: block;
+      background: #dcfce7;
+      color: #16a34a;
+    }
+    #msg.err {
+      display: block;
+      background: #fee2e2;
+      color: #dc2626;
+    }
+  </style>
+</head>
+<body>
+  <h1>穿搭试衣助手 - 设置</h1>
+
+  <label for="serverUrl">服务器地址</label>
+  <input id="serverUrl" type="text" placeholder="http://127.0.0.1:8000" />
+  <div class="hint">穿搭试衣工具后端运行的地址，默认 http://127.0.0.1:8000</div>
+
+  <label for="token">访问令牌（可选）</label>
+  <input id="token" type="text" placeholder="服务端设置了 OUTFIT_API_TOKEN 时才需要" />
+
+  <div class="row">
+    <button id="saveBtn">保存</button>
+    <button id="testBtn">测试连接</button>
+  </div>
+
+  <div id="msg"></div>
+
+  <script src="options.js"></script>
+</body>
+</html>

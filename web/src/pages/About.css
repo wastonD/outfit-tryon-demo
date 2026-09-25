@@ -1,0 +1,22 @@
+.about-page {
+  max-width: 640px;
+}
+
+.about-page h1 {
+  font-size: 20px;
+}
+
+.about-notice {
+  background: var(--bg);
+  color: var(--text-muted);
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.about-page p {
+  margin: 0 0 8px;
+}
+
+.about-back {
+  margin-top: 24px;
+}

@@ -1,0 +1,30 @@
+.settings-page .card {
+  margin-bottom: 16px;
+}
+
+.feature-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+}
+.feature-row:last-child {
+  border-bottom: none;
+}
+
+.provider-table {
+  width: 100%;
+  margin-top: 12px;
+  font-size: 13px;
+  border-collapse: collapse;
+}
+.provider-table td {
+  padding: 6px 4px;
+  border-bottom: 1px solid var(--border);
+}
+
+.warnings {
+  margin: 12px 0 0;
+  padding-left: 18px;
+}

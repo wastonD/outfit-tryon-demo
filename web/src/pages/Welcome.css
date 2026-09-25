@@ -1,0 +1,24 @@
+.welcome-page {
+  display: flex;
+  justify-content: center;
+  padding-top: 15vh;
+}
+
+.welcome-card {
+  width: 100%;
+  max-width: 360px;
+}
+
+.welcome-card h1 {
+  font-size: 20px;
+}
+
+.welcome-card .field {
+  margin-top: 16px;
+}
+
+@media (max-width: 640px) {
+  .welcome-page {
+    padding-top: 48px;
+  }
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 550">
+  <rect width="300" height="550" fill="#f6f5f2"/>
+  <ellipse cx="150" cy="500" rx="70" ry="10" fill="#00000014"/>
+  <path d="M150 60 Q190 60 195 105 Q198 130 188 150 Q210 165 218 220 L230 340 L200 345 L185 240 L182 480 L158 480 L152 260 L148 260 L142 480 L118 480 L115 240 L100 345 L70 340 L82 220 Q90 165 112 150 Q102 130 105 105 Q110 60 150 60 Z"
+        fill="#a7c4d4" stroke="#7fa3b8" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M150 55 Q115 55 108 100 Q106 118 112 128 Q108 90 150 88 Q192 90 188 128 Q194 118 192 100 Q185 55 150 55 Z" fill="#5a3a28"/>
+  <path d="M112 150 Q150 168 188 150 L182 200 Q150 212 118 200 Z" fill="#d1d5db"/>
+  <text x="150" y="40" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#6b6b70">形象 2</text>
+</svg>

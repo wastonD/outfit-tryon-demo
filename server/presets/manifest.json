@@ -1,0 +1,799 @@
+{
+  "items": [
+    {
+      "id": "female-medium-slim-light",
+      "name": {
+        "zh": "女 · 偏瘦 · 浅肤色",
+        "en": "Female · Slim · Light skin"
+      },
+      "body": {
+        "gender": "female",
+        "height": "medium",
+        "build": "slim",
+        "skin": "light"
+      },
+      "image": "images/female-medium-slim-light.png",
+      "internal_only": false
+    },
+    {
+      "id": "female-medium-slim-light-2",
+      "name": {
+        "zh": "女 · 偏瘦 · 浅肤色 · 造型2",
+        "en": "Female · Slim · Light skin · Look 2"
+      },
+      "body": {
+        "gender": "female",
+        "height": "medium",
+        "build": "slim",
+        "skin": "light"
+      },
+      "image": "images/female-medium-slim-light-2.png",
+      "internal_only": false
+    },
+    {
+      "id": "female-medium-slim-medium",
+      "name": {
+        "zh": "女 · 偏瘦 · 中等肤色",
+        "en": "Female · Slim · Medium skin"
+      },
+      "body": {
+        "gender": "female",
+        "height": "medium",
+        "build": "slim",
+        "skin": "medium"
+      },
+      "image": "images/female-medium-slim-medium.png",
+      "internal_only": false
+    },
+    {
+      "id": "female-medium-slim-medium-2",
+      "name": {
+        "zh": "女 · 偏瘦 · 中等肤色 · 造型2",
+        "en": "Female · Slim · Medium skin · Look 2"
+      },
+      "body": {
+        "gender": "female",
+        "height": "medium",
+        "build": "slim",
+        "skin": "medium"
+      },
+      "image": "images/female-medium-slim-medium-2.png",
+      "internal_only": false
+    },
+    {
+      "id": "female-medium-slim-medium-3",
+      "name": {
+        "zh": "女 · 偏瘦 · 中等肤色 · 造型3",
+        "en": "Female · Slim · Medium skin · Look 3"
+      },
+      "body": {
+        "gender": "female",
+        "height": "medium",
+        "build": "slim",
+        "skin": "medium"
+      },
+      "image": "images/female-medium-slim-medium-3.png",
+      "internal_only": false
+    },
+    {
+      "id": "female-medium-slim-dark",
+      "name": {
+        "zh": "女 · 偏瘦 · 深肤色",
+        "en": "Female · Slim · Dark skin"
+      },
+      "body": {
+        "gender": "female",
+        "height": "medium",
+        "build": "slim",
+        "skin": "dark"
+      },
+      "image": "images/female-medium-slim-dark.png",
+      "internal_only": false
+    },
+    {
+      "id": "female-medium-slim-dark-2",
+      "name": {
+        "zh": "女 · 偏瘦 · 深肤色 · 造型2",
+        "en": "Female · Slim · Dark skin · Look 2"
+      },
+      "body": {
+        "gender": "female",
+        "height": "medium",
+        "build": "slim",
+        "skin": "dark"
+      },
+      "image": "images/female-medium-slim-dark-2.png",
+      "internal_only": false
+    },
+    {
+      "id": "female-medium-slim-dark-3",
+      "name": {
+        "zh": "女 · 偏瘦 · 深肤色 · 造型3",
+        "en": "Female · Slim · Dark skin · Look 3"
+      },
+      "body": {
+        "gender": "female",
+        "height": "medium",
+        "build": "slim",
+        "skin": "dark"
+      },
+      "image": "images/female-medium-slim-dark-3.png",
+      "internal_only": false
+    },
+    {
+      "id": "female-medium-regular-light",
+      "name": {
+        "zh": "女 · 标准 · 浅肤色",
+        "en": "Female · Average · Light skin"
+      },
+      "body": {
+        "gender": "female",
+        "height": "medium",
+        "build": "regular",
+        "skin": "light"
+      },
+      "image": "images/female-medium-regular-light.png",
+      "internal_only": false
+    },
+    {
+      "id": "female-medium-regular-light-2",
+      "name": {
+        "zh": "女 · 标准 · 浅肤色 · 造型2",
+        "en": "Female · Average · Light skin · Look 2"
+      },
+      "body": {
+        "gender": "female",
+        "height": "medium",
+        "build": "regular",
+        "skin": "light"
+      },
+      "image": "images/female-medium-regular-light-2.png",
+      "internal_only": false
+    },
+    {
+      "id": "female-medium-regular-light-3",
+      "name": {
+        "zh": "女 · 标准 · 浅肤色 · 造型3",
+        "en": "Female · Average · Light skin · Look 3"
+      },
+      "body": {
+        "gender": "female",
+        "height": "medium",
+        "build": "regular",
+        "skin": "light"
+      },
+      "image": "images/female-medium-regular-light-3.png",
+      "internal_only": false
+    },
+    {
+      "id": "female-medium-regular-medium",
+      "name": {
+        "zh": "女 · 标准 · 中等肤色",
+        "en": "Female · Average · Medium skin"
+      },
+      "body": {
+        "gender": "female",
+        "height": "medium",
+        "build": "regular",
+        "skin": "medium"
+      },
+      "image": "images/female-medium-regular-medium.png",
+      "internal_only": false
+    },
+    {
+      "id": "female-medium-regular-medium-2",
+      "name": {
+        "zh": "女 · 标准 · 中等肤色 · 造型2",
+        "en": "Female · Average · Medium skin · Look 2"
+      },
+      "body": {
+        "gender": "female",
+        "height": "medium",
+        "build": "regular",
+        "skin": "medium"
+      },
+      "image": "images/female-medium-regular-medium-2.png",
+      "internal_only": false
+    },
+    {
+      "id": "female-medium-regular-medium-3",
+      "name": {
+        "zh": "女 · 标准 · 中等肤色 · 造型3",
+        "en": "Female · Average · Medium skin · Look 3"
+      },
+      "body": {
+        "gender": "female",
+        "height": "medium",
+        "build": "regular",
+        "skin": "medium"
+      },
+      "image": "images/female-medium-regular-medium-3.png",
+      "internal_only": false
+    },
+    {
+      "id": "female-medium-regular-dark",
+      "name": {
+        "zh": "女 · 标准 · 深肤色",
+        "en": "Female · Average · Dark skin"
+      },
+      "body": {
+        "gender": "female",
+        "height": "medium",
+        "build": "regular",
+        "skin": "dark"
+      },
+      "image": "images/female-medium-regular-dark.png",
+      "internal_only": false
+    },
+    {
+      "id": "female-medium-regular-dark-2",
+      "name": {
+        "zh": "女 · 标准 · 深肤色 · 造型2",
+        "en": "Female · Average · Dark skin · Look 2"
+      },
+      "body": {
+        "gender": "female",
+        "height": "medium",
+        "build": "regular",
+        "skin": "dark"
+      },
+      "image": "images/female-medium-regular-dark-2.png",
+      "internal_only": false
+    },
+    {
+      "id": "female-medium-regular-dark-3",
+      "name": {
+        "zh": "女 · 标准 · 深肤色 · 造型3",
+        "en": "Female · Average · Dark skin · Look 3"
+      },
+      "body": {
+        "gender": "female",
+        "height": "medium",
+        "build": "regular",
+        "skin": "dark"
+      },
+      "image": "images/female-medium-regular-dark-3.png",
+      "internal_only": false
+    },
+    {
+      "id": "female-medium-plus-light",
+      "name": {
+        "zh": "女 · 偏胖 · 浅肤色",
+        "en": "Female · Plus-size · Light skin"
+      },
+      "body": {
+        "gender": "female",
+        "height": "medium",
+        "build": "plus",
+        "skin": "light"
+      },
+      "image": "images/female-medium-plus-light.png",
+      "internal_only": false
+    },
+    {
+      "id": "female-medium-plus-light-2",
+      "name": {
+        "zh": "女 · 偏胖 · 浅肤色 · 造型2",
+        "en": "Female · Plus-size · Light skin · Look 2"
+      },
+      "body": {
+        "gender": "female",
+        "height": "medium",
+        "build": "plus",
+        "skin": "light"
+      },
+      "image": "images/female-medium-plus-light-2.png",
+      "internal_only": false
+    },
+    {
+      "id": "female-medium-plus-light-3",
+      "name": {
+        "zh": "女 · 偏胖 · 浅肤色 · 造型3",
+        "en": "Female · Plus-size · Light skin · Look 3"
+      },
+      "body": {
+        "gender": "female",
+        "height": "medium",
+        "build": "plus",
+        "skin": "light"
+      },
+      "image": "images/female-medium-plus-light-3.png",
+      "internal_only": false
+    },
+    {
+      "id": "female-medium-plus-medium",
+      "name": {
+        "zh": "女 · 偏胖 · 中等肤色",
+        "en": "Female · Plus-size · Medium skin"
+      },
+      "body": {
+        "gender": "female",
+        "height": "medium",
+        "build": "plus",
+        "skin": "medium"
+      },
+      "image": "images/female-medium-plus-medium.png",
+      "internal_only": false
+    },
+    {
+      "id": "female-medium-plus-medium-2",
+      "name": {
+        "zh": "女 · 偏胖 · 中等肤色 · 造型2",
+        "en": "Female · Plus-size · Medium skin · Look 2"
+      },
+      "body": {
+        "gender": "female",
+        "height": "medium",
+        "build": "plus",
+        "skin": "medium"
+      },
+      "image": "images/female-medium-plus-medium-2.png",
+      "internal_only": false
+    },
+    {
+      "id": "female-medium-plus-medium-3",
+      "name": {
+        "zh": "女 · 偏胖 · 中等肤色 · 造型3",
+        "en": "Female · Plus-size · Medium skin · Look 3"
+      },
+      "body": {
+        "gender": "female",
+        "height": "medium",
+        "build": "plus",
+        "skin": "medium"
+      },
+      "image": "images/female-medium-plus-medium-3.png",
+      "internal_only": false
+    },
+    {
+      "id": "female-medium-plus-dark",
+      "name": {
+        "zh": "女 · 偏胖 · 深肤色",
+        "en": "Female · Plus-size · Dark skin"
+      },
+      "body": {
+        "gender": "female",
+        "height": "medium",
+        "build": "plus",
+        "skin": "dark"
+      },
+      "image": "images/female-medium-plus-dark.png",
+      "internal_only": false
+    },
+    {
+      "id": "female-medium-plus-dark-2",
+      "name": {
+        "zh": "女 · 偏胖 · 深肤色 · 造型2",
+        "en": "Female · Plus-size · Dark skin · Look 2"
+      },
+      "body": {
+        "gender": "female",
+        "height": "medium",
+        "build": "plus",
+        "skin": "dark"
+      },
+      "image": "images/female-medium-plus-dark-2.png",
+      "internal_only": false
+    },
+    {
+      "id": "female-medium-plus-dark-3",
+      "name": {
+        "zh": "女 · 偏胖 · 深肤色 · 造型3",
+        "en": "Female · Plus-size · Dark skin · Look 3"
+      },
+      "body": {
+        "gender": "female",
+        "height": "medium",
+        "build": "plus",
+        "skin": "dark"
+      },
+      "image": "images/female-medium-plus-dark-3.png",
+      "internal_only": false
+    },
+    {
+      "id": "male-medium-slim-light",
+      "name": {
+        "zh": "男 · 偏瘦 · 浅肤色",
+        "en": "Male · Slim · Light skin"
+      },
+      "body": {
+        "gender": "male",
+        "height": "medium",
+        "build": "slim",
+        "skin": "light"
+      },
+      "image": "images/male-medium-slim-light.png",
+      "internal_only": false
+    },
+    {
+      "id": "male-medium-slim-light-2",
+      "name": {
+        "zh": "男 · 偏瘦 · 浅肤色 · 造型2",
+        "en": "Male · Slim · Light skin · Look 2"
+      },
+      "body": {
+        "gender": "male",
+        "height": "medium",
+        "build": "slim",
+        "skin": "light"
+      },
+      "image": "images/male-medium-slim-light-2.png",
+      "internal_only": false
+    },
+    {
+      "id": "male-medium-slim-light-3",
+      "name": {
+        "zh": "男 · 偏瘦 · 浅肤色 · 造型3",
+        "en": "Male · Slim · Light skin · Look 3"
+      },
+      "body": {
+        "gender": "male",
+        "height": "medium",
+        "build": "slim",
+        "skin": "light"
+      },
+      "image": "images/male-medium-slim-light-3.png",
+      "internal_only": false
+    },
+    {
+      "id": "male-medium-slim-medium",
+      "name": {
+        "zh": "男 · 偏瘦 · 中等肤色",
+        "en": "Male · Slim · Medium skin"
+      },
+      "body": {
+        "gender": "male",
+        "height": "medium",
+        "build": "slim",
+        "skin": "medium"
+      },
+      "image": "images/male-medium-slim-medium.png",
+      "internal_only": false
+    },
+    {
+      "id": "male-medium-slim-medium-2",
+      "name": {
+        "zh": "男 · 偏瘦 · 中等肤色 · 造型2",
+        "en": "Male · Slim · Medium skin · Look 2"
+      },
+      "body": {
+        "gender": "male",
+        "height": "medium",
+        "build": "slim",
+        "skin": "medium"
+      },
+      "image": "images/male-medium-slim-medium-2.png",
+      "internal_only": false
+    },
+    {
+      "id": "male-medium-slim-medium-3",
+      "name": {
+        "zh": "男 · 偏瘦 · 中等肤色 · 造型3",
+        "en": "Male · Slim · Medium skin · Look 3"
+      },
+      "body": {
+        "gender": "male",
+        "height": "medium",
+        "build": "slim",
+        "skin": "medium"
+      },
+      "image": "images/male-medium-slim-medium-3.png",
+      "internal_only": false
+    },
+    {
+      "id": "male-medium-slim-dark",
+      "name": {
+        "zh": "男 · 偏瘦 · 深肤色",
+        "en": "Male · Slim · Dark skin"
+      },
+      "body": {
+        "gender": "male",
+        "height": "medium",
+        "build": "slim",
+        "skin": "dark"
+      },
+      "image": "images/male-medium-slim-dark.png",
+      "internal_only": false
+    },
+    {
+      "id": "male-medium-slim-dark-2",
+      "name": {
+        "zh": "男 · 偏瘦 · 深肤色 · 造型2",
+        "en": "Male · Slim · Dark skin · Look 2"
+      },
+      "body": {
+        "gender": "male",
+        "height": "medium",
+        "build": "slim",
+        "skin": "dark"
+      },
+      "image": "images/male-medium-slim-dark-2.png",
+      "internal_only": false
+    },
+    {
+      "id": "male-medium-slim-dark-3",
+      "name": {
+        "zh": "男 · 偏瘦 · 深肤色 · 造型3",
+        "en": "Male · Slim · Dark skin · Look 3"
+      },
+      "body": {
+        "gender": "male",
+        "height": "medium",
+        "build": "slim",
+        "skin": "dark"
+      },
+      "image": "images/male-medium-slim-dark-3.png",
+      "internal_only": false
+    },
+    {
+      "id": "male-medium-regular-light",
+      "name": {
+        "zh": "男 · 标准 · 浅肤色",
+        "en": "Male · Average · Light skin"
+      },
+      "body": {
+        "gender": "male",
+        "height": "medium",
+        "build": "regular",
+        "skin": "light"
+      },
+      "image": "images/male-medium-regular-light.png",
+      "internal_only": false
+    },
+    {
+      "id": "male-medium-regular-light-2",
+      "name": {
+        "zh": "男 · 标准 · 浅肤色 · 造型2",
+        "en": "Male · Average · Light skin · Look 2"
+      },
+      "body": {
+        "gender": "male",
+        "height": "medium",
+        "build": "regular",
+        "skin": "light"
+      },
+      "image": "images/male-medium-regular-light-2.png",
+      "internal_only": false
+    },
+    {
+      "id": "male-medium-regular-light-3",
+      "name": {
+        "zh": "男 · 标准 · 浅肤色 · 造型3",
+        "en": "Male · Average · Light skin · Look 3"
+      },
+      "body": {
+        "gender": "male",
+        "height": "medium",
+        "build": "regular",
+        "skin": "light"
+      },
+      "image": "images/male-medium-regular-light-3.png",
+      "internal_only": false
+    },
+    {
+      "id": "male-medium-regular-medium",
+      "name": {
+        "zh": "男 · 标准 · 中等肤色",
+        "en": "Male · Average · Medium skin"
+      },
+      "body": {
+        "gender": "male",
+        "height": "medium",
+        "build": "regular",
+        "skin": "medium"
+      },
+      "image": "images/male-medium-regular-medium.png",
+      "internal_only": false
+    },
+    {
+      "id": "male-medium-regular-medium-2",
+      "name": {
+        "zh": "男 · 标准 · 中等肤色 · 造型2",
+        "en": "Male · Average · Medium skin · Look 2"
+      },
+      "body": {
+        "gender": "male",
+        "height": "medium",
+        "build": "regular",
+        "skin": "medium"
+      },
+      "image": "images/male-medium-regular-medium-2.png",
+      "internal_only": false
+    },
+    {
+      "id": "male-medium-regular-medium-3",
+      "name": {
+        "zh": "男 · 标准 · 中等肤色 · 造型3",
+        "en": "Male · Average · Medium skin · Look 3"
+      },
+      "body": {
+        "gender": "male",
+        "height": "medium",
+        "build": "regular",
+        "skin": "medium"
+      },
+      "image": "images/male-medium-regular-medium-3.png",
+      "internal_only": false
+    },
+    {
+      "id": "male-medium-regular-dark",
+      "name": {
+        "zh": "男 · 标准 · 深肤色",
+        "en": "Male · Average · Dark skin"
+      },
+      "body": {
+        "gender": "male",
+        "height": "medium",
+        "build": "regular",
+        "skin": "dark"
+      },
+      "image": "images/male-medium-regular-dark.png",
+      "internal_only": false
+    },
+    {
+      "id": "male-medium-regular-dark-2",
+      "name": {
+        "zh": "男 · 标准 · 深肤色 · 造型2",
+        "en": "Male · Average · Dark skin · Look 2"
+      },
+      "body": {
+        "gender": "male",
+        "height": "medium",
+        "build": "regular",
+        "skin": "dark"
+      },
+      "image": "images/male-medium-regular-dark-2.png",
+      "internal_only": false
+    },
+    {
+      "id": "male-medium-regular-dark-3",
+      "name": {
+        "zh": "男 · 标准 · 深肤色 · 造型3",
+        "en": "Male · Average · Dark skin · Look 3"
+      },
+      "body": {
+        "gender": "male",
+        "height": "medium",
+        "build": "regular",
+        "skin": "dark"
+      },
+      "image": "images/male-medium-regular-dark-3.png",
+      "internal_only": false
+    },
+    {
+      "id": "male-medium-plus-light",
+      "name": {
+        "zh": "男 · 偏胖 · 浅肤色",
+        "en": "Male · Plus-size · Light skin"
+      },
+      "body": {
+        "gender": "male",
+        "height": "medium",
+        "build": "plus",
+        "skin": "light"
+      },
+      "image": "images/male-medium-plus-light.png",
+      "internal_only": false
+    },
+    {
+      "id": "male-medium-plus-light-2",
+      "name": {
+        "zh": "男 · 偏胖 · 浅肤色 · 造型2",
+        "en": "Male · Plus-size · Light skin · Look 2"
+      },
+      "body": {
+        "gender": "male",
+        "height": "medium",
+        "build": "plus",
+        "skin": "light"
+      },
+      "image": "images/male-medium-plus-light-2.png",
+      "internal_only": false
+    },
+    {
+      "id": "male-medium-plus-light-3",
+      "name": {
+        "zh": "男 · 偏胖 · 浅肤色 · 造型3",
+        "en": "Male · Plus-size · Light skin · Look 3"
+      },
+      "body": {
+        "gender": "male",
+        "height": "medium",
+        "build": "plus",
+        "skin": "light"
+      },
+      "image": "images/male-medium-plus-light-3.png",
+      "internal_only": false
+    },
+    {
+      "id": "male-medium-plus-medium",
+      "name": {
+        "zh": "男 · 偏胖 · 中等肤色",
+        "en": "Male · Plus-size · Medium skin"
+      },
+      "body": {
+        "gender": "male",
+        "height": "medium",
+        "build": "plus",
+        "skin": "medium"
+      },
+      "image": "images/male-medium-plus-medium.png",
+      "internal_only": false
+    },
+    {
+      "id": "male-medium-plus-medium-2",
+      "name": {
+        "zh": "男 · 偏胖 · 中等肤色 · 造型2",
+        "en": "Male · Plus-size · Medium skin · Look 2"
+      },
+      "body": {
+        "gender": "male",
+        "height": "medium",
+        "build": "plus",
+        "skin": "medium"
+      },
+      "image": "images/male-medium-plus-medium-2.png",
+      "internal_only": false
+    },
+    {
+      "id": "male-medium-plus-medium-3",
+      "name": {
+        "zh": "男 · 偏胖 · 中等肤色 · 造型3",
+        "en": "Male · Plus-size · Medium skin · Look 3"
+      },
+      "body": {
+        "gender": "male",
+        "height": "medium",
+        "build": "plus",
+        "skin": "medium"
+      },
+      "image": "images/male-medium-plus-medium-3.png",
+      "internal_only": false
+    },
+    {
+      "id": "male-medium-plus-dark",
+      "name": {
+        "zh": "男 · 偏胖 · 深肤色",
+        "en": "Male · Plus-size · Dark skin"
+      },
+      "body": {
+        "gender": "male",
+        "height": "medium",
+        "build": "plus",
+        "skin": "dark"
+      },
+      "image": "images/male-medium-plus-dark.png",
+      "internal_only": false
+    },
+    {
+      "id": "male-medium-plus-dark-2",
+      "name": {
+        "zh": "男 · 偏胖 · 深肤色 · 造型2",
+        "en": "Male · Plus-size · Dark skin · Look 2"
+      },
+      "body": {
+        "gender": "male",
+        "height": "medium",
+        "build": "plus",
+        "skin": "dark"
+      },
+      "image": "images/male-medium-plus-dark-2.png",
+      "internal_only": false
+    },
+    {
+      "id": "male-medium-plus-dark-3",
+      "name": {
+        "zh": "男 · 偏胖 · 深肤色 · 造型3",
+        "en": "Male · Plus-size · Dark skin · Look 3"
+      },
+      "body": {
+        "gender": "male",
+        "height": "medium",
+        "build": "plus",
+        "skin": "dark"
+      },
+      "image": "images/male-medium-plus-dark-3.png",
+      "internal_only": false
+    }
+  ]
+}

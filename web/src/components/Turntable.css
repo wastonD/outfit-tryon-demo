@@ -1,0 +1,28 @@
+.turntable {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: #000;
+  touch-action: none;
+  cursor: ew-resize;
+  aspect-ratio: 3 / 4;
+  max-width: 360px;
+}
+
+.turntable video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.turntable-hint {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 2px 8px;
+  border-radius: 99px;
+  font-size: 12px;
+}

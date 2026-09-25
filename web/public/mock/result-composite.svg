@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 550">
+  <rect width="300" height="550" fill="#f6f5f2"/>
+  <ellipse cx="150" cy="505" rx="72" ry="10" fill="#00000014"/>
+  <path d="M150 60 Q190 60 195 105 Q198 130 188 150 Q210 165 218 220 L230 340 L200 345 L185 240 L182 480 L158 480 L152 260 L148 260 L142 480 L118 480 L115 240 L100 345 L70 340 L82 220 Q90 165 112 150 Q102 130 105 105 Q110 60 150 60 Z"
+        fill="#f2c9a0" stroke="#c9986a" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M150 55 Q115 55 108 100 Q106 118 112 128 Q108 90 150 88 Q192 90 188 128 Q194 118 192 100 Q185 55 150 55 Z" fill="#3a2a20"/>
+  <path d="M105 148 L85 190 L60 235 L95 258 L112 220 L108 250 L100 340 L200 340 L192 250 L188 220 L205 258 L240 235 L215 190 L195 148 Q150 178 105 148 Z"
+        fill="#5b8def" stroke="#2b4d9c" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M110 340 L100 480 L136 480 L144 345 Z" fill="#3f6f8f" stroke="#1c3648" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M190 340 L200 480 L164 480 L156 345 Z" fill="#3f6f8f" stroke="#1c3648" stroke-width="3" stroke-linejoin="round"/>
+  <rect x="10" y="10" width="90" height="26" rx="13" fill="#00000099"/>
+  <text x="55" y="28" font-family="system-ui,sans-serif" font-size="14" fill="#fff" text-anchor="middle">AI 生成</text>
+</svg>

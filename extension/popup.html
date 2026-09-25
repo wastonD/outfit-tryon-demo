@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>穿搭试衣助手</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>加入衣橱</h1>
+    <button id="openOptions" class="icon-btn" title="设置">⚙️</button>
+  </header>
+
+  <main id="app">
+    <div id="status" class="hint">正在读取页面…</div>
+    <div id="grid" class="grid" hidden></div>
+    <div id="emptyState" class="hint" hidden>这个页面没有找到可用的商品图。</div>
+  </main>
+
+  <footer>
+    <div id="resultMsg" class="result-msg" hidden></div>
+    <button id="submitBtn" class="primary-btn" disabled>加入衣橱</button>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

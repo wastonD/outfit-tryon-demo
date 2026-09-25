@@ -1,0 +1,29 @@
+# 密钥和本机配置
+.env
+server/config/providers.yaml
+
+# Python
+.venv/
+__pycache__/
+.pytest_cache/
+
+# 运行数据
+server/data/
+*.log
+
+# 模型权重和下载的二进制（体积大，可重新下载）
+worker/weights/
+worker/models/
+worker/llama_cpp/
+# 上游原始仓库，仅作对照；产品代码用的是 worker/app/vendor/ 里去掉人体分割的版本
+worker/vendor/
+
+# 运行时文件
+ops/logs/
+ops/run/
+server/config/users.json
+extension/dev/field-notes/
+
+# 前端
+node_modules/
+web/dist/
